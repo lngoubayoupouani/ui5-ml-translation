@@ -1,0 +1,29 @@
+<mvc:View xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.jp.ui5-ml-translation.controller.ViewMain" displayBlock="true">
+	<App id="idAppControl">
+		<pages>
+			<Page title="{i18n>title}">
+				<content>
+					<VBox width="auto" direction="Column" id="vbox0" class="sapUiMediumMargin">
+						<items>
+							<FlexBox xmlns="sap.m" id="box0" width="auto" alignItems="Stretch">
+								<items>
+									<TextArea xmlns="sap.m" rows="4" id="area2" placeholder="{i18n>sourceTextPlaceholder}" width="100%" value="{/sourceText}">
+										<layoutData>
+											<FlexItemData growFactor="1"/>
+										</layoutData>
+									</TextArea>
+									<TextArea xmlns="sap.m" rows="4" id="area3" editable="false" placeholder="Translation" width="100%" value="{/translatedText}">
+										<layoutData>
+											<FlexItemData growFactor="1"/>
+										</layoutData>
+									</TextArea>
+								</items>
+							</FlexBox>
+							<Button xmlns="sap.m" text="Translate" id="button0" press="onPressTranslate" width="100%"/>
+						</items>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
