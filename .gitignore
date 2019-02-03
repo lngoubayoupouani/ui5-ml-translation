@@ -12,3 +12,5 @@ changes_preview.js
 AppVariant_index.html
 APIExternalProducer.js
 .*/APIExternalProducer.js
+/webapp/model/ml-api.json
+/package-lock.json
