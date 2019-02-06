@@ -6,14 +6,8 @@ sap.ui.define([
 	return Controller.extend("com.jp.ui5-ml-translation.controller.ViewMain", {
 		
 		onInit: function () {
-			// Create a JSON model from an object literal
-			var oModel = new JSONModel({
-				sourceText: "",
-				translatedText: ""
-			});
-			
-			// Assign the model object to the view
-			this.getView().setModel(oModel);
+			// Create view model
+			this._createViewModel();
 		},
 		
 		/**
@@ -25,21 +19,44 @@ sap.ui.define([
 			
 			if(sSourceText){
 				// Translate the text
-				this.translateText(sSourceText);
+				this._translateText(sSourceText);
 			}
 		},
 		
-		translateText: function (sSourceText) {
+		/** 
+		 * Create view model
+		 * @private 
+		 */
+		_createViewModel: function () {
+			// Create a JSON model from an object literal
+			var oModel = new JSONModel({
+				sourceText: "",
+				translatedText: ""
+			});
+			
+			// Assign the model object to the view
+			this.getView().setModel(oModel);
+		},
+		
+		/** 
+		 * Translate the text
+		 * @private 
+		 * @param sSourceText
+		 */
+		_translateText: function (sSourceText) {
 			var that = this;
 			
 			// Get API key
 			var apiKey = this.getView().getModel("ml-api").getProperty("/APIKey");
 			
+			// Get language selected on screen
+			var sLanguage = this.getView().byId("selectLanguages").getSelectedItem().getKey();
+			
 			// Set request's body
 			var data = JSON.stringify({
 			  "sourceLanguage": "en",
 			  "targetLanguages": [
-			    "fr"
+			    sLanguage
 			  ],
 			  "units": [
 			    {

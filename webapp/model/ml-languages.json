@@ -1,0 +1,16 @@
+{
+	"LanguageCollection": [
+		{
+			"Code": "pt",
+			"Name": "Portuguese"
+		},
+		{
+			"Code": "fr",
+			"Name": "French"
+		},
+		{
+			"Code": "es",
+			"Name": "Spanish"
+		}
+	]
+}

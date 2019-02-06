@@ -65,6 +65,11 @@
 				"type": "sap.ui.model.json.JSONModel",
 				"preload": true,
 				"uri": "model/ml-api.json"
+			},
+			"ml-languages": {
+				"type": "sap.ui.model.json.JSONModel",
+				"preload": true,
+				"uri": "model/ml-languages.json"
 			}
 		},
 		"resources": {
