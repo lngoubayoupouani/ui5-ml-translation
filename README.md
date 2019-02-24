@@ -7,6 +7,7 @@ SAP UI5 translation app powered by [SAP Leonardo Machine Learning API](https://a
 
 To translate a text:
 1. Type a text in English on the left box.
+1. Select a target language from the dropdown on the right.
 1. Click the button [ Translate ].
 1. See the translated text on the right.
 
