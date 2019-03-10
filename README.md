@@ -12,7 +12,7 @@ To translate a text:
 1. See the translated text on the right.
 
 ## Prerequisites
-- [SAP Cloud Platform](http://cloudplatform.sap.com) trial account
+- [SAP Cloud Platform](http://cloudplatform.sap.com) trial account.
 
 ## Instructions
 
@@ -42,6 +42,3 @@ In order to consume the SAP API service, you may provide an API key for authenti
   "APIKey":"<<< YOUR_API_KEY >>>"
 }
 ```
-
-## Author
-[Jansen Penido](https://about.me/jansen.penido)
